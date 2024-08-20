@@ -26,12 +26,13 @@ void TunnelScene::initializeGL()
     glClearColor(0.1f, 0.1f, 0.1f, 1.0f); // Set background color
     glEnable(GL_DEPTH_TEST);
 
-    shaderProgram->addShaderFromSourceFile(QOpenGLShader::Vertex, "vertex.glsl");
-    shaderProgram->addShaderFromSourceFile(QOpenGLShader::Fragment, "fragment.glsl");
+    shaderProgram->addShaderFromSourceFile(QOpenGLShader::Vertex, ":/shaders/vertex.glsl");
+    shaderProgram->addShaderFromSourceFile(QOpenGLShader::Fragment, ":/shaders/fragment.glsl");
     shaderProgram->link();
     shaderProgram->bind();
 
     createTunnel();
+
 
     // Initialize the camera position at the other end of the tunnel, inside the bounds
     QVector3D initialCameraPosition(0.0f, 0.0f, -1.0f);

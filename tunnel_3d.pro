@@ -1,7 +1,10 @@
+LIBS += -lopengl32
+
 QT = core widgets 3dcore 3drender 3dinput 3dextras openglwidgets opengl
 
 
 CONFIG += c++17 cmdline
+
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -21,6 +24,6 @@ HEADERS += \
     controls_class.h \
     tunnelscene.h
 
-RESOURCES +=
+RESOURCES += resources.qrc
 
 DISTFILES +=
